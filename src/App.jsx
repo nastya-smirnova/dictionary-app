@@ -20,7 +20,9 @@ function App() {
   return (
     <inputContext.Provider value={value}>
       <div classNaame="App">
-        <Header />
+        <div className="App-header">
+          <Header />
+        </div>
       </div>
     </inputContext.Provider>
   );

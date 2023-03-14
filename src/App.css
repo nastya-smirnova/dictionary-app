@@ -50,6 +50,10 @@
   justify-content: center;
 }
 
+.find-definition {
+  margin-top: 10px;
+}
+
 .btn {
   background-color: #ffc145;
   color: #fffffb;
@@ -61,7 +65,7 @@
   color: #fffffb;
   background-color: #ff6b6c;
   border-color: #fffffb;
-}  */
+} */
 
 /* ffc145 - orange
 fffffb - white

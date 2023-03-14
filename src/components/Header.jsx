@@ -28,28 +28,33 @@ const Header = () => {
         <h1 classNaame="text-3xl text-center font-bold text-white">
           Pocket Dictionary
         </h1>
-        <div className="flex items-center justify-center mt-5">
-          <div className="search_align">
+        <div className="d-flex justify-content-center">
+          <div className="px-4 py-2 md:w-80 search_align">
             {/* <div className="flex border-2 border-gray-200 rounded"> */}
             <input
-              className="px-4 py-2 md:w-80"
+              className=""
               type="text"
               placeholder="Search..."
+              value={value}
               onChange={handleInputChange}
               onKeyDown={handleInputKeyDown}
             ></input>
-            <div>
-              <button
-                className="btn"
-                type="button"
-                class="btn btn-primary btn-lg"
-              >
-                Search
-              </button>
-            </div>
+            <button
+              className="btn btn-warning"
+              type="button"
+              // class="btn btn-primary btn-lg"
+              onClick={() => handleSubmit()}
+            >
+              Search
+            </button>
           </div>
         </div>
-        <p className="find-definition">Find definition for word:</p>
+        {inputValue && (
+          <h3 className="text-gray-50 text-center mt-4">
+            Find definition for word:{" "}
+            <span className="text-white font-bold">{inputValue}</span>
+          </h3>
+        )}
       </div>
     </div>
   );

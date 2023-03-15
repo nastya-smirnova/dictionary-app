@@ -4,13 +4,14 @@ import { createContext, useState } from "react";
 import Header from "./components/Header";
 
 import "./App.css";
+import ResultList from "./components/Result.list";
 
 //Create context
 export const inputContext = createContext();
 
 function App() {
   const [inputValue, setInputValue] = useState("");
-  console.log(inputValue);
+  // console.log(inputValue);
 
   const value = {
     inputValue,
@@ -22,6 +23,7 @@ function App() {
       <div classNaame="App">
         <div className="App-header">
           <Header />
+          <ResultList />
         </div>
       </div>
     </inputContext.Provider>

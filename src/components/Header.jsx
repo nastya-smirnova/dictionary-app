@@ -6,7 +6,7 @@ const Header = () => {
   const [value, setValue] = useState("");
 
   const { inputValue, setInputValue } = useContext(inputContext);
-  console.log(value);
+  // console.log(value);
 
   const handleInputChange = (e) => setValue(e.target.value);
 

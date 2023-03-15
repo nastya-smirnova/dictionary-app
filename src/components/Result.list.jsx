@@ -31,16 +31,28 @@ const ResultList = () => {
     }
   }, [inputValue]);
 
-  console.log(response);
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return (
+      <h3 className="text-center mt-10 font-semibold text-gray-500">
+        No Definitions Found
+      </h3>
+    );
+  }
 
   return (
     <div className="container mx-auto p-4 max-w-2">
-      <div>
-        <h3 className="text-2xl font-bold mt-4">Meaning & Definition:</h3>
-        <h3 className="text-2xl font-bold mt-4">Example:</h3>
-        <h3 className="text-2xl font-bold mt-4">Synonym:</h3>
-        <h3 className="text-2xl font-bold mt-4">Antonym:</h3>
-      </div>
+      {response && (
+        <div>
+          <h3 className="text-2xl font-bold mt-4">Meaning & Definition:</h3>
+          <h3 className="text-2xl font-bold mt-4">Example:</h3>
+          <h3 className="text-2xl font-bold mt-4">Synonym:</h3>
+          <h3 className="text-2xl font-bold mt-4">Antonym:</h3>
+        </div>
+      )}
     </div>
   );
 };

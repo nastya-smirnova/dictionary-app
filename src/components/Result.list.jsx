@@ -74,3 +74,7 @@ const ResultList = () => {
 };
 
 export default ResultList;
+
+//cd Projects/dictionary-app-in-react/
+//export NODE_OPTIONS=--openssl-legacy-provider
+//npm start
